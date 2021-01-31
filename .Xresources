@@ -1,0 +1,6 @@
+XTerm.termName : xterm-256color
+Xterm.vt100.locale : true
+*foreground: rgb:b2/b2/b2
+*background: rgb:08/08/08
+xterm*facesize: 16
+xterm*renderFont: true
