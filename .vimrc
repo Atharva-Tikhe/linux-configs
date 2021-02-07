@@ -3,7 +3,7 @@ set tabstop=4
 set number
 set relativenumber
 set smartindent
-set noncompatible
+"set noncompatible
 filetype off
 set mouse=nicr
 set clipboard=unnamed
@@ -18,13 +18,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'powerline/powerline'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vimwiki/vimwiki'
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 Plugin 'vim-python/python-syntax'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-surround'
-
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
 
+
+let delimitMate_expand_cr = 1 "Auto delimit
 
 filetype plugin indent on
 
@@ -33,9 +35,8 @@ filetype plugin indent on
 
 "powerline
 
-let g:lighline = {
-		'colorscheme':'dracula',
-			}
+let g:lighline = {'colorscheme':'dracula',}
+
 
 set laststatus=2
 
@@ -44,7 +45,7 @@ set t_Co=256
 let g:rehash256=1
 set noshowmode "prevent previous mode from showing under powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Text related stuff 
+"Text related stuff
 
 set expandtab
 set smarttab
@@ -53,8 +54,14 @@ set shiftwidth=4
 set tabstop=4
 
 " NERDTree
+let mapleader = ","
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>. :NERDTree <CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
-map <C-n> :NerdTreeToggle<CR>
+
+
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 let NERDTreeShowLineNumbers=1
@@ -93,7 +100,7 @@ let g:minimap_highlight='Visual'
 
 let g:python_highlight_all = 1
 
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
+au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
 au BufEnter *.org            call org#SetOrgFileType()
 
 set guioptions-=m  "remove menu bar
