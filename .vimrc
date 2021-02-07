@@ -1,3 +1,17 @@
+          __             _____________________                         
+"        //\\            = = = = = = = = = = = 
+"       //  \\                     ▓         
+"      //    \\                    ▓ 
+"     //      \\                   ▓
+"    //========\\                  ▓
+"   //          \\                 ▓
+"  //            \\                ▓
+" //              \\               ▓
+
+
+"  this configuration used Vundle as its Plugin manager
+"  [git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim] <- to install vundle on new system
+
 syntax enable
 set tabstop=4
 set number
