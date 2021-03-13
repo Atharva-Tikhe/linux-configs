@@ -41,7 +41,7 @@ set $up l
 set $down k
 set $left j
 set $right semicolon
-set $TERMINAL alacritty
+set $TERMINAL fish
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
